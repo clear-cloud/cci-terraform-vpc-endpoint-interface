@@ -11,4 +11,5 @@ resource "aws_vpc_endpoint" "endpoint" {
     "${aws_security_group.endpoint.id}",
   ]
 
+  private_dns_enabled = true
 }
