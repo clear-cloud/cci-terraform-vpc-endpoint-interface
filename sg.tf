@@ -1,5 +1,5 @@
 resource "aws_security_group" "endpoint" {
-  name        = "SG for access to Interface type VPC Endpoints in ${var.environment}"
+  name        = "${var.service_name} access in ${var.environment}"
   description = "Allows access to Interface type VPC Endpoints from ${var.vpc_cidr}"
   vpc_id      = "${var.vpc_id}"
 
