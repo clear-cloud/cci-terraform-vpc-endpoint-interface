@@ -1,5 +1,5 @@
 resource "aws_vpc_endpoint_subnet_association" "association" {
- depend_on = ["aws_vpc_endpoint.endpoint"]
+ depends_on = ["aws_vpc_endpoint.endpoint"]
 
   count           = "${length(split(",", var.subnet_id))}"
   vpc_endpoint_id = "${aws_vpc_endpoint.endpoint.id}"
