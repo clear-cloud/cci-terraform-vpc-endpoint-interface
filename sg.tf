@@ -1,7 +1,7 @@
 resource "aws_security_group" "endpoint" {
-  name        = "SG for access to Interface type VPC Endpoints in var.environment"
-  description = "Allows access to Interface type VPC Endpoints from var.vpc_cidr"
-  vpc_id      = "${id}"
+  name        = "SG for access to Interface type VPC Endpoints in ${var.environment}"
+  description = "Allows access to Interface type VPC Endpoints from ${var.vpc_cidr}"
+  vpc_id      = "${var.vpc_id}"
 
   ingress {
     from_port   = 443
