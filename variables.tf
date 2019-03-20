@@ -1,3 +1,4 @@
+variable "subnet_id" {}
 variable "service_name" {}
 variable "vpc_id" {}
 
